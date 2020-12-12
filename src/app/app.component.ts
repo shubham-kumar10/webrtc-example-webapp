@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
       this.userMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
       this.showChatRoom();
 
-      this.signaling = new WebSocket('ws://localhost:9090/socket');
+      this.signaling = new WebSocket('ws://opus-webapp.herokuapp.com//socket');
       this.peerConnection = this.createPeerConnection();
 
       this.addMessageHandler();
